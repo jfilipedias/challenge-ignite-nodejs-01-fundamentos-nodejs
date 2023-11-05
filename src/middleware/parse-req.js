@@ -9,7 +9,7 @@ function getQueryParams(query) {
     }, {})
 }
 
-export function parseReq(req) {
+export function parseReq(route, req) {
   const routeParams = req.url.match(route.path)
   const { query, ...params } = routeParams.groups
   req.params = params

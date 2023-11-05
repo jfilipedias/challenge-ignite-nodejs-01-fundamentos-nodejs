@@ -1,8 +1,8 @@
 import http from 'node:http'
 
-import { json } from './middleware/json'
-import { parseReq } from './middleware/parse-req'
-import { routes } from './routes'
+import { json } from './middleware/json.js'
+import { parseReq } from './middleware/parse-req.js'
+import { routes } from './routes.js'
 
 const server = http.createServer(async (req, res) => {
   await json(req, res)
@@ -13,7 +13,7 @@ const server = http.createServer(async (req, res) => {
   )
 
   if (route) {
-    parseReq(req)
+    parseReq(route, req)
     return route.handler(req, res)
   }
 

@@ -1,37 +1,37 @@
-import { buildRoutePath } from "./utils/build-route-path";
+import { buildRoutePathRegExp } from "./utils/build-route-path.js";
 
 export const routes = [
   {
     method: 'POST',
-    path: buildRoutePath('/tasks'),
+    path: buildRoutePathRegExp('/tasks'),
     handler: (req, res) => {
       return res.writeHead(201).end()
     }
   },
   {
     method: 'GET',
-    path: buildRoutePath('/tasks'),
+    path: buildRoutePathRegExp('/tasks'),
     handler: (req, res) => {
       return res.writeHead(201).end()
     }
   },
   {
     method: 'PUT',
-    path: buildRoutePath('/tasks/:id'),
+    path: buildRoutePathRegExp('/tasks/:id'),
     handler: (req, res) => {
       return res.writeHead(201).end()
     }
   },
   {
     method: 'DELETE',
-    path: buildRoutePath('/tasks/:id'),
+    path: buildRoutePathRegExp('/tasks/:id'),
     handler: (req, res) => {
       return res.writeHead(201).end()
     }
   },
   {
     method: 'PATCH',
-    path: buildRoutePath('/tasks/:id/complete'),
+    path: buildRoutePathRegExp('/tasks/:id/complete'),
     handler: (req, res) => {
       return res.writeHead(201).end()
     }
