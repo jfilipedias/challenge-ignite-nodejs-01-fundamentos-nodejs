@@ -7,7 +7,14 @@
   "scripts": {
     "dev": "node --watch src/server.js"
   },
-  "keywords": ["nodejs", "api", "http"],
+  "keywords": [
+    "nodejs",
+    "api",
+    "http"
+  ],
   "author": "jfilipedias",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "csv-parse": "^5.5.2"
+  }
 }
